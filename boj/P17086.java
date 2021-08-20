@@ -8,13 +8,13 @@ import java.util.Scanner;
  *
  * BFS 문제
  *
- * 상어가잇는점에서 모두 bfs돌리기
+ * 상어가잇는점에서 모두 bfs돌리
  *
  * */
 public class P17086 {
 	static int N,M, map [][],dis [][];
 	static int dx [] = {-1,1,0,0,-1,-1,1,1};
-	static int dy []= {0,0,-1,1,1,-1,1,-1,};
+	static int dy [] = {0,0,-1,1,1,-1,1,-1};
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		N = sc.nextInt();
