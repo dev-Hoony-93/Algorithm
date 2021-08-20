@@ -11,10 +11,11 @@ import java.util.Scanner;
  * 상어가잇는점에서 모두 bfs돌리
  *
  * */
+
 public class P17086 {
 	static int N,M, map [][],dis [][];
 	static int dx [] = {-1,1,0,0,-1,-1,1,1};
-	static int dy [] = {0,0,-1,1,1,-1,1,-1};
+	static int dy []= {0,0,-1,1,1,-1,1,-1};
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		N = sc.nextInt();
@@ -27,6 +28,7 @@ public class P17086 {
 				dis[i][j] = -1;
 			}
 		}
+
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < M; j++) {
 				if(map[i][j]==1)	{
@@ -52,7 +54,9 @@ public class P17086 {
 			Pair p = q.poll();
 
 			if(dis[p.x][p.y]==-1) dis[p.x][p.y]= p.d;
-			else dis[p.x][p.y] = Math.min(dis[p.x][p.y], p.d);
+			else if (p.d<dis[p.x][p.y]) dis[p.x][p.y] = p.d;
+            else continue;
+
 			for (int i = 0; i < 8; i++) {
 				int nx=p.x + dx[i];
 				int ny=p.y + dy[i];
