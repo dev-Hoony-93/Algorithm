@@ -50,12 +50,9 @@ public class P2665_d {
 				int nx = p.x + dx[i];
 				int ny = p.y + dy[i];
 				if(!isRange(nx, ny)) continue;
-				if( dis[nx][ny] == -1) {
+				if( dis[nx][ny] == -1 || dis[nx][ny] > (map[nx][ny] ==1? p.b2w: p.b2w+1)) {
 					dis[nx][ny] = map[nx][ny] ==1? p.b2w: p.b2w+1;
-					q.add(new Pair(nx, ny, map[nx][ny] ==1? p.b2w: p.b2w+1));
-				}else if (dis[nx][ny] > (map[nx][ny] ==1? p.b2w: p.b2w+1)) {
-					dis[nx][ny] = map[nx][ny] ==1? p.b2w: p.b2w+1;
-					q.add(new Pair(nx, ny, map[nx][ny] ==1? p.b2w: p.b2w+1));
+					q.add(new Pair(nx, ny, dis[nx][ny]));
 				}
 			}
 		}
