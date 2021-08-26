@@ -2,6 +2,14 @@ package boj;
 
 import java.util.Scanner;
 
+/**
+ *
+ * boj - P2003
+ *
+ * 이것도 투포인터 부분합문제
+ *
+ * */
+
 public class P2003 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
