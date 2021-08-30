@@ -26,7 +26,6 @@ public class P2665 {
 		N = Integer.parseInt(sc.nextLine());
 
 		map = new int[N][N];
-		isVisited = new boolean[N][N];
 
 		for (int i = 0; i < N; i++) {
 			char temp[] = sc.nextLine().toCharArray();
