@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * boj - P22944 죽음의 비
  *
- * bfs?
+ * bfs인데, visited에 보통 true, false이지만 int값을 넣어서 방문했을때의 체력으로 비교를 해줬다.
  *
  *
  *
